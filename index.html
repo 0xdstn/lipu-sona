@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <title>lipu sona</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="manifest" href="manifest.json">
+    </head>
+    <body>
+        <header>
+            <h1>
+                <span class="linja">lipu-sona</span>lipu sona
+            </h1>
+            <span id="progress">
+                <span id="cur">1</span>/137
+            </span>
+        </header>
+
+        <div id="card">
+            <span class="linja" id="sitelen"></span>
+            <span id="toki"></span>
+            <span id="inli"></span>
+        </div>
+
+        <div id="settings">
+            <h2>Settings</h2>
+            <p><strong>Front</strong></p>
+            <label><input type="radio" checked="checked" id="front-sitelen" name="sitelen" value="front" /> sitelen pona</label>
+            <label><input type="radio" checked="checked" id="front-toki" name="toki" value="front" /> toki pona</label>
+            <label><input type="radio" id="front-inli" name="inli" value="front" /> toki Inli</label>
+            <p><strong>Back</strong></p>
+            <label><input type="radio" id="back-sitelen" name="sitelen" value="back" /> sitelen pona</label>
+            <label><input type="radio" id="back-toki" name="toki" value="back" /> toki pona</label>
+            <label><input type="radio" checked="checked" id="back-inli" name="inli" value="back" /> toki Inli</label>
+            <p><strong>Hidden</strong></p>
+            <label><input type="radio" id="hidden-sitelen" name="sitelen" value="hidden" /> sitelen pona</label>
+            <label><input type="radio" id="hidden-toki" name="toki" value="hidden" /> toki pona</label>
+            <label><input type="radio" checked="checked" id="hidden-inli" name="inli" value="hidden" /> toki Inli</label>
+            <br><br>
+            <a href="#" id="close-settings">Close settings</a>
+        </div>
+
+        <div id="about">
+            <h2>About</h2>
+            <p>This tool was created with <span class="linja">olin</span> by <a href="/~dustin/" target="_blank">~dustin</a>.</p>
+            <p>I wanted a simple tool to practice learning toki pona and sitelen pona, so I made this.</p>
+            <p>This site is a PWA, meaning you can install it to your device in Android and it will look and act like a native application.</p>
+            <p>You can find the source here: <a href="https://github.com/0xdstn/lipu-sona" target="_blank">github.com/0xdstn/lipu-sona</a></p>
+            <a href="#" id="close-about">Close about</a>
+        </div>
+
+        <footer>
+            <a href="#" id="open-settings">settings</a>
+            <a href="#" id="open-about">about</a>
+        </footer>
+
+        <script src="main.js"></script>
+    </body>
+</html>

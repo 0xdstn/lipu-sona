@@ -1,0 +1,144 @@
+@font-face { 
+    font-family: linjapona;
+    src: url("linja-pona-4.9.otf") format("opentype");
+}
+html, body { 
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+body { 
+    box-sizing: border-box;
+    color:  #1c1c1c;
+    display: flex;
+    flex-direction: column;
+    letter-spacing: 1px;
+    line-height: 1.75em; 
+    font-family: monospace;
+    font-size: 14px;
+}
+
+a {
+    color: #000;
+}
+
+.linja { 
+    font-family: 'linjapona';
+    letter-spacing: 0;
+    font-size: 1.5em;
+    margin: 0; 
+    position: relative;
+    top: 2px;
+}
+
+header {
+    align-items: center;
+    border-bottom: solid 1px #1c1c1c;
+    display: flex;
+    flex-direction: columns;
+    justify-content: space-between;
+    padding: 1em;
+}
+
+h1 {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+h1 span.linja {
+    font-size: 2em;
+    padding-right: 5px;
+    top: 5px;
+}
+
+#progress {
+    font-size: 1.25em;
+    padding: .25em;
+}
+
+#card {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: center;
+    padding: 1em;
+    user-select: none;
+    text-align: center;
+}
+
+#card span {
+    display: block;
+    padding-bottom: 1em;
+}
+
+#sitelen.linja {
+    font-size: 6em;
+    line-height: 1em;
+    padding-bottom: .25em;
+}
+
+#toki {
+    font-size: 2em;
+}
+
+#card #inli {
+    display: none;
+    font-size: 1.5em;
+}
+
+#card #sitelen,
+#card #toki,
+#card #inli {
+    display: none;
+}
+
+#card.front-sitelen:not(.flipped) #sitelen { display: block; }
+#card.back-sitelen.flipped #sitelen { display: block; }
+
+#card.front-toki:not(.flipped) #toki { display: block; }
+#card.back-toki.flipped #toki { display: block; }
+
+#card.front-inli:not(.flipped) #inli { display: block; }
+#card.back-inli.flipped #inli { display: block; }
+
+#about,
+#settings {
+    background: #fff;
+    display: none;
+    padding: 1em;
+    position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+}
+
+#about.open,
+#settings.open {
+    display: block;
+}
+
+#about h2,
+#settings h2 {
+    margin-top: 0;
+}
+
+footer {
+    border-top: solid 1px #1c1c1c;
+    padding: 1em;
+    user-select: none;
+    text-align: center;
+}
+
+#close-about,
+#close-settings {
+    background: #ddd;
+    border-radius: 4px;
+    color: #000;
+    font-weight: bold;
+    padding: .5em;
+    text-decoration: none;
+}

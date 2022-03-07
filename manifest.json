@@ -1,0 +1,17 @@
+{
+  "name": "lipu sona",
+  "short_name": "lipu sona",
+  "description": "Toki Pona flash cards",
+  "icons": [
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/~dustin/lipu-sona/",
+  "scope": "/~dustin/lipu-sona/",
+  "display": "standalone",
+  "theme_color": "#fff",
+  "background_color": "#fff"
+}
