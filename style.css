@@ -142,3 +142,7 @@ footer {
     padding: .5em;
     text-decoration: none;
 }
+
+#words {
+    width: 300px;
+}

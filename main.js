@@ -3,6 +3,7 @@ if('serviceWorker' in navigator) {
 };
 
 var cur = document.getElementById('cur');
+var max = document.getElementById('max');
 var card = document.getElementById('card');
 var sitelen = document.getElementById('sitelen');
 var toki = document.getElementById('toki');
@@ -16,6 +17,7 @@ var backInli = document.getElementById('back-inli');
 var hiddenSitelen = document.getElementById('hidden-sitelen');
 var hiddenToki = document.getElementById('hidden-toki');
 var hiddenInli = document.getElementById('hidden-inli');
+var customWords = document.getElementById('words');
 var settings = document.getElementById('settings');
 var openSettings = document.getElementById('open-settings');
 var closeSettings = document.getElementById('close-settings');
@@ -164,6 +166,16 @@ var tokiWords = {
     "wile" : "vt to want, need, wish, have to, must, will, should\nn desire, need, will\nmod necessary"
 };
 
+const originalWords = {...tokiWords};
+
+var w = localStorage.getItem('lipu-sona-words');
+if(w !== null) {
+    customWords.value = w;
+    setCustomWords();
+}
+
+max.innerHTML = Object.keys(tokiWords).length.toString();
+
 var curCard = 0;
 var avail = [];
 var flipped = false;
@@ -240,6 +252,7 @@ backInli.addEventListener('change',updateSettings);
 hiddenSitelen.addEventListener('change',updateSettings);
 hiddenToki.addEventListener('change',updateSettings);
 hiddenInli.addEventListener('change',updateSettings);
+customWords.addEventListener('change',updateWords);
 
 openSettings.addEventListener('click',function(e) {
     e.preventDefault();
@@ -285,6 +298,31 @@ function updateSettings() {
     localStorage.setItem('lipu-sona-hidden',hidden.join(','));
 
     updateCardClasses();
+}
+
+function updateWords() {
+    if(customWords.value.length) {
+        localStorage.setItem('lipu-sona-words',customWords.value);
+    } else {
+        localStorage.removeItem('lipu-sona-words');
+        tokiWords = {...originalWords};
+    }
+    setCustomWords();
+}
+
+function setCustomWords() {
+    var w = localStorage.getItem('lipu-sona-words');
+    if(w !== null) {
+        var sp = w.split(',');
+        tokiWords = {...originalWords};
+        Object.keys(tokiWords).forEach(x => {
+            if(!sp.includes(x)) {
+                delete tokiWords[x];
+            }
+        });
+    }
+    reset();
+    max.innerHTML = Object.keys(tokiWords).length.toString();
 }
 
 function updateCardClasses() {
