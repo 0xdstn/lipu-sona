@@ -9,8 +9,8 @@
       "type": "image/png"
     }
   ],
-  "start_url": "/~dustin/lipu-sona/",
-  "scope": "/~dustin/lipu-sona/",
+  "start_url": "/lipu-sona/",
+  "scope": "/lipu-sona/",
   "display": "standalone",
   "theme_color": "#fff",
   "background_color": "#fff"

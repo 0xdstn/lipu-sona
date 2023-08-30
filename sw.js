@@ -1,11 +1,11 @@
-const cacheName = 'lipu-sona-v2';
+const cacheName = 'lipu-sona-v2a';
 const appFiles = [
-    '/~dustin/lipu-sona/',
-    '/~dustin/lipu-sona/index.html',
-    '/~dustin/lipu-sona/main.js',
-    '/~dustin/lipu-sona/style.css',
-    '/~dustin/lipu-sona/icon-512.png',
-    '/~dustin/lipu-sona/linja-pona-4.9.otf'
+    '/lipu-sona/',
+    '/lipu-sona/index.html',
+    '/lipu-sona/main.js',
+    '/lipu-sona/style.css',
+    '/lipu-sona/icon-512.png',
+    '/lipu-sona/linja-pona-4.9.otf'
 ];
 
 self.addEventListener('install', (e) => {
